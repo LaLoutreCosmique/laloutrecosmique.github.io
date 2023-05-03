@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Poetsen One';
+    src: url(/fonts/PoetsenOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: Smoolthan;
+    src: url(/fonts/Smoolthan\ Thin.otf);
+    font-weight: lighter;
+}
+
+body {
+    margin: 0;
+    background-color: #070d33;
+    color: #f0ffff;
+}
+
+h1 {
+    font-family: 'Poetsen One';
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Poetsen One';
+    font-size: 30px;
+}
+
+.content {
+    height: 900px;
+    width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+
+.content__text {
+    margin: auto;
+    text-align: center;
+    font-family: Smoolthan;
+    font-size: 25px;
+}
+
+.content__text span {
+    background: -webkit-linear-gradient(right, #e7c114, #eb2424);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content a {
+    color: #f0ffff;
+}
+
+.content.bg {
+    background: radial-gradient(closest-side at 50% 50%, #f0ffff1f, #070d3300);
+}
