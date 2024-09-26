@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Poetsen One";
+  src: url(/fonts/PoetsenOne-Regular.ttf);
+}
+@font-face {
+  font-family: Smoolthan;
+  src: url(/fonts/Smoolthan\ Thin.otf);
+  font-weight: lighter;
+}
+* {
+  cursor: none;
+}
+
+body {
+  margin: 0;
+  background-color: #04081f;
+  color: #f0ffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p,
+button {
+  font-family: "Smoolthan";
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+h1 {
+  font-family: "Poetsen One";
+  font-size: 7rem;
+  text-transform: uppercase;
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(right, #e7c114, #eb2424);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  font-family: "Smoolthan";
+  padding: 0.9rem 1.4rem;
+  border: 3px solid #f0ffff;
+  border-radius: 2rem;
+}
+
+.primary {
+  background: #f0ffff;
+  color: #04081f;
+  box-shadow: 0px 2px 20px 5px rgba(4, 8, 31, 0.7), 0px 0px 20px 4px #f0ffff;
+}
+
+#cursor-dot,
+#cursor-light {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+#cursor-dot {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #f0ffff;
+  mix-blend-mode: difference;
+}
+
+#cursor-light {
+  width: 1500px;
+  height: 1500px;
+  background: radial-gradient(closest-side at 50% 50%, rgba(240, 255, 255, 0.1), rgba(4, 8, 31, 0));
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=style.css.map */

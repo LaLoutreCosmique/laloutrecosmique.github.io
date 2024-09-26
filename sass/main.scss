@@ -1,0 +1,110 @@
+// Colors
+$primary-color: #e7c114;
+$secondary-color: #eb2424;
+$dark-blue: #04081f;
+$white: #f0ffff;
+
+@font-face {
+    font-family: 'Poetsen One';
+    src: url(/fonts/PoetsenOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: Smoolthan;
+    src: url(/fonts/Smoolthan\ Thin.otf);
+    font-weight: lighter;
+}
+
+// ------------------------------------------------------
+
+* {
+    cursor: none;
+}
+
+body {
+    margin: 0;
+    background-color: $dark-blue;
+    color: $white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p,
+button {
+    font-family: 'Smoolthan';
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+h1 {
+    font-family: 'Poetsen One';
+    font-size: 7rem;
+    text-transform: uppercase;
+}
+
+.gradient-text {
+    background: -webkit-linear-gradient(right, $primary-color, $secondary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// BUTTONS //
+
+.button {
+    //TODO: remove this
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+    font-family: 'Smoolthan';
+    padding: 0.9rem 1.4rem;
+    border: 3px solid $white;
+    border-radius: 2rem;
+}
+
+.primary {
+    background: $white;
+    color: $dark-blue;
+    box-shadow:
+        0px 2px 20px 5px rgba($dark-blue, 0.7),
+        0px 0px 20px 4px $white;
+}
+
+// CURSOR //
+
+#cursor-dot,
+#cursor-light {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    transition:
+        opacity 0.4s ease-in-out,
+        transform 0.3s ease-in-out;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+#cursor-dot {
+    border-radius: 50%;
+    $size: 10px;
+    width: $size;
+    height: $size;
+    background-color: $white;
+    mix-blend-mode: difference;
+}
+
+#cursor-light {
+    width: 1500px;
+    height: 1500px;
+    background: radial-gradient(
+        closest-side at 50% 50%,
+        rgba($white, .1),
+        rgba($dark-blue, 0)
+        );
+    pointer-events: none;
+}
