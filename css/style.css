@@ -7,6 +7,46 @@
   src: url(/fonts/Smoolthan\ Thin.otf);
   font-weight: lighter;
 }
+@-webkit-keyframes gradient-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@-moz-keyframes gradient-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@-ms-keyframes gradient-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@-o-keyframes gradient-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes gradient-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
 * {
   cursor: none;
 }
@@ -22,10 +62,10 @@ body {
 }
 
 p,
-button {
+.button {
   font-family: "Smoolthan";
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 h1 {
@@ -35,9 +75,16 @@ h1 {
 }
 
 .gradient-text {
-  background: -webkit-linear-gradient(right, #e7c114, #eb2424);
+  background: linear-gradient(to right, #eb2424, #e7c114, #eb2424, #e7c114, #eb2424);
+  background-size: 200% auto;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-animation: gradient-anim 4s linear infinite;
+  -moz-animation: gradient-anim 4s linear infinite;
+  -ms-animation: gradient-anim 4s linear infinite;
+  -o-animation: gradient-anim 4s linear infinite;
+  animation: gradient-anim 4s linear infinite;
 }
 
 .button {
@@ -55,6 +102,11 @@ h1 {
 .primary {
   background: #f0ffff;
   color: #04081f;
+  box-shadow: 0px 2px 20px 5px rgba(4, 8, 31, 0.7), 0px 0px 0px 0px #f0ffff;
+  transition: box-shadow 0.3s ease-in;
+}
+
+.primary:hover {
   box-shadow: 0px 2px 20px 5px rgba(4, 8, 31, 0.7), 0px 0px 20px 4px #f0ffff;
 }
 
