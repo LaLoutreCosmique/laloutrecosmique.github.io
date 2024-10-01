@@ -2,11 +2,12 @@
   font-family: "Poetsen One";
   src: url(/fonts/PoetsenOne-Regular.ttf);
 }
-@font-face {
-  font-family: Smoolthan;
-  src: url(/fonts/Smoolthan\ Thin.otf);
-  font-weight: lighter;
+.varela-round-regular {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
 @-webkit-keyframes gradient-anim {
   0% {
     background-position: 0% 50%;
@@ -63,10 +64,10 @@ body {
 
 p,
 .button {
-  font-family: "Smoolthan";
-  font-weight: bold;
-  font-size: 1.25rem;
-  font-stretch: semi-expanded;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.13rem;
 }
 
 h1 {
@@ -76,6 +77,8 @@ h1 {
 }
 
 .gradient-text {
+  letter-spacing: 5px;
+  font-size: 1.3rem;
   background: linear-gradient(to right, #eb2424, #e7c114, #eb2424, #e7c114, #eb2424);
   background-size: 200% auto;
   background-clip: text;
@@ -94,7 +97,6 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   display: block;
-  font-family: "Smoolthan";
   padding: 0.9rem 1.4rem;
   border: 3px solid #f0ffff;
   border-radius: 2rem;
