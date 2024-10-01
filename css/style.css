@@ -52,7 +52,12 @@
   cursor: none;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   margin: 0;
   background-color: #04081f;
   color: #f0ffff;
@@ -60,25 +65,27 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  justify-content: center;
 }
 
 p,
 .button {
-  font-family: "Varela Round", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 1.13rem;
 }
 
 h1 {
   font-family: "Poetsen One";
-  font-size: 7rem;
+  font-size: 6rem;
   text-transform: uppercase;
 }
 
 .gradient-text {
   letter-spacing: 5px;
   font-size: 1.3rem;
+  font-weight: bold;
   background: linear-gradient(to right, #eb2424, #e7c114, #eb2424, #e7c114, #eb2424);
   background-size: 200% auto;
   background-clip: text;
@@ -92,10 +99,6 @@ h1 {
 }
 
 .button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: block;
   padding: 0.9rem 1.4rem;
   border: 3px solid #f0ffff;
@@ -118,7 +121,7 @@ h1 {
   position: absolute;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.4s ease-in-out, transform 0.2s ease-in-out;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
