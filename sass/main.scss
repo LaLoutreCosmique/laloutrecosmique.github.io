@@ -14,12 +14,6 @@ $gradient: linear-gradient(to right, $secondary-color, $primary-color, $secondar
     src: url(/fonts/PoetsenOne-Regular.ttf);
 }
 
-.varela-round-regular {
-    font-family: "Varela Round", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}  
-
 // ------------------------------------------------------
 
 // ANIM //
@@ -63,10 +57,11 @@ $gradient: linear-gradient(to right, $secondary-color, $primary-color, $secondar
 
 html {
     height: 100%;
+    overflow: hidden;
 }
 
 body {
-    height: 100%;
+    height: 90%;
     margin: 0;
     background-color: $dark-blue;
     color: $white;
@@ -89,6 +84,8 @@ h1 {
     font-family: 'Poetsen One';
     font-size: 6rem;
     text-transform: uppercase;
+    margin-block-start: 0;
+    margin-block-end: 0.2em;
 }
 
 .gradient-text {
@@ -104,13 +101,18 @@ h1 {
     @include animation('gradient-anim 4s linear infinite');
 }
 
+.feather {
+    stroke-width: 3;
+}
+
 // BUTTONS //
 
 .button {
     display: block;
     padding: 0.9rem 1.4rem;
-    border: 3px solid $white;
+    border: 4px solid $white;
     border-radius: 2rem;
+    transition: box-shadow 0.3s ease-in;
 }
 
 .primary {
@@ -119,11 +121,9 @@ h1 {
     box-shadow:
         0px 2px 20px 5px rgba($dark-blue, 0.7),
         0px 0px 0px 0px $white;
-    transition:
-        box-shadow 0.3s ease-in;
 }
 
-.primary:hover {
+.button:hover {
     box-shadow:
         0px 2px 20px 5px rgba($dark-blue, 0.7),
         0px 0px 20px 4px $white;
@@ -166,3 +166,66 @@ h1 {
 
 // ------------------------------------------------------
 
+// NAV BUTTONS //
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+
+    span {
+        color: rgba($color: $white, $alpha: 0.5);
+        margin-bottom: 15px;
+
+        transition: color 0.2s linear;
+    }
+}
+
+.nav-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.nav-right {
+    top: 50%;
+    right: 7%;
+    transform: translateY(-50%);
+
+    &:has(.button:hover) span {
+        color: $white;
+    }
+}
+
+.nav-left {
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+
+    &:has(.button:hover) span {
+        color: $white;
+    }
+}
+
+.nav-down {
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:has(.button:hover) span {
+        color: $white;
+    }
+}
+
+// ------------------------------------------------------
+
+.hero {
+    overflow: hidden;
+
+    .letter {
+        display: inline-block;
+        line-height: 1em;
+      }
+}
