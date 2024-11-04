@@ -67,10 +67,6 @@ var cursor = {
         });
     },
 
-    moveDot: function() {
-        
-    },
-
     animateDotLight: function () {
         var self = this;
 

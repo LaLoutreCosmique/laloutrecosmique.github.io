@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   AnimAtLoad();
   pizzaRavioli.init();
+  menuNavigation.init();
 });
 
 function AnimAtLoad() {
@@ -90,5 +91,58 @@ var pizzaRavioli = {
       duration: 1000,
       delay: (el, i) => 30 * i
     });
+  }
+}
+
+var menuNavigation = {
+  navButton: null,
+  heroMoves: false,
+  $hero: null,
+
+  init: function () {
+    var self = this;
+
+    this.$hero = document.querySelector('.hero');
+    this.$subHero = document.querySelector('.sub-hero');
+
+    document.querySelectorAll('.nav-left a').forEach(function (el) {
+      el.addEventListener('click', function () {
+        self.navLeft();
+      })
+    })
+
+    document.querySelectorAll('.nav-right a').forEach(function (el) {
+      el.addEventListener('click', function () {
+        self.navLeft();
+      })
+    })
+
+    document.querySelectorAll('.nav-down a').forEach(function (el) {
+      el.addEventListener('click', function () {
+        self.navLeft();
+      })
+    })
+  },
+
+  navLeft: function () {
+    this.moveHero();
+  },
+
+  navRight: function () {
+    this.moveHero();
+  },
+
+  navDown: function () {
+    this.moveHero();
+  },
+
+  moveHero: function () {
+    if (this.heroMoves === false){
+      this.heroMoves = true;
+      this.$hero.style.top = '3%';
+      this.$hero.style.fontSize = '3rem';
+
+      this.$subHero.style.top = '13%';
+    }
   }
 }
