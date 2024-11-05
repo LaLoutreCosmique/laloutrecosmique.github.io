@@ -18,16 +18,24 @@
     <h1 class="hero">Erwan Le Caro</h1>
     <p class="sub-hero anim-fade gradient-text">Apprenti game developer</p>
 
-    <section class="section-container">
-        <div class="page-id-1 projects" style="display: none;">
-            <div class="project-image" style="background-image: url(img/LMC.png);"></div>
-            <h2 class="title">Let Me Cook</h2>
-        </div>
-        <div class="page-id-2 projects" style="display: none;">
-            <div class="project-image" style="background-image: url(img/LMC.png);"></div>
-            <h2 class="title">Let Me Cook</h2>
-        </div>
-    </section>
+    <div class="section-container">
+        <section id="page-id-0" class="home" style="display: block;">
+            <h2>AH C'EST L'ACCUEIL OUBLIE PAS DE REMETTRE COMME QUAND ON ARRIVE HEIN</h2>
+        </section>
+        <section id="page-id-1" class="projects" style="display: none;">
+            <img src="img/LMC.png">
+            <h2>Projets</h2>
+        </section>
+        <section id="page-id-2" class="experience" style="display: none;">
+            <h2 class="title">Parcours</h2>
+        </section>
+        <section id="page-id-3" class="discover" style="display: none;">
+            <h2 class="title">Qui suis-je ?</h2>
+        </section>
+        <section id="contact-page" class="discover" style="display: none;">
+            <h2 class="title">Contactez-moi je vous en supplie</h2>
+        </section>
+    </div>
 
     <div class="nav nav-right anim-fade">
         <span>Mes projets</span>
@@ -43,7 +51,7 @@
     </div>
 
     <!-- Cursor -->
-    <div>
+    <div id="cursor">
         <div id="cursor-dot"></div>
         <div id="cursor-light"></div>
         <script src="js/cursor.js"></script>
