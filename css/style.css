@@ -42,6 +42,10 @@
     background-position: 100% 50%;
   }
 }
+* {
+  cursor: none;
+}
+
 html {
   height: 100%;
   overflow: hidden;
