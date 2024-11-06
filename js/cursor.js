@@ -11,6 +11,9 @@ var cursor = {
     $light: document.querySelector('#cursor-light'),
 
     init: function () {
+        this.$dot = document.querySelector('#cursor-dot'),
+        this.$light = document.querySelector('#cursor-light'),
+
         // Set up element sizes
         this.dotSize = this.$dot.offsetWidth;
         this.lightSize = this.$light.offsetWidth;
@@ -114,5 +117,3 @@ var cursor = {
         }
     }
 }
-
-cursor.init();

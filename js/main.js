@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   AnimAtLoad();
   pizzaRavioli.init();
   menuNavigation.init();
+  cursor.init();
 });
 
 function AnimAtLoad() {
