@@ -55,14 +55,14 @@ var cursor = {
         });
 
         // Hide/show cursor
-        document.addEventListener('mouseenter', function (e) {
+        document.querySelector("html").addEventListener('mouseenter', function (e) {
             self.isVisible = true;
             self.toggleCursorVisibility();
             self.$dot.style.opacity = 1;
             self.$light.style.opacity = 1;
         });
 
-        document.addEventListener('mouseleave', function (e) {
+        document.querySelector("html").addEventListener('mouseleave', function (e) {
             self.isVisible = false;
             self.toggleCursorVisibility();
             self.$dot.style.opacity = 0;
