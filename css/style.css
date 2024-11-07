@@ -190,6 +190,27 @@ h1 {
   color: #f0ffff;
 }
 
+#nav-dots {
+  position: absolute;
+  display: flex;
+  bottom: 15px;
+  width: 70px;
+  justify-content: space-between;
+}
+#nav-dots .nav-dot {
+  background: #f0ffff;
+  border-radius: 50%;
+  height: 7px;
+  width: 7px;
+  opacity: 20%;
+  transition: all 0.4s ease-out;
+}
+#nav-dots .selected {
+  width: 30px;
+  opacity: 40%;
+  border-radius: 5px;
+}
+
 .hero {
   overflow: hidden;
   position: absolute;

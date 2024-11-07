@@ -1,65 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Erwan Le Caro</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="js/cursor.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1 class="hero">Erwan Le Caro</h1>
-    <p class="sub-hero anim-fade gradient-text">Apprenti game developer</p>
+    <p class="sub-hero anim-fade gradient-text">Apprenti game dev.</p>
 
     <div class="section-container">
-        <section id="page-id-0" class="home" style="display: block;">
-            <h2>AH C'EST L'ACCUEIL OUBLIE PAS DE REMETTRE COMME QUAND ON ARRIVE HEIN</h2>
-        </section>
-        <section id="page-id-1" class="projects" style="display: none;">
-            <img src="img/LMC.png">
-            <h2>Projets</h2>
-        </section>
-        <section id="page-id-2" class="experience" style="display: none;">
-            <h2 class="title">Parcours</h2>
-        </section>
-        <section id="page-id-3" class="discover" style="display: none;">
-            <h2 class="title">Qui suis-je ?</h2>
-        </section>
-        <section id="contact-page" class="discover" style="display: none;">
-            <h2 class="title">Contactez-moi je vous en supplie</h2>
-        </section>
+      <section id="page-id-0" class="home" style="display: block">
+        <h2>AH C'EST L'ACCUEIL</h2>
+      </section>
+      <section id="page-id-1" class="projects" style="display: none">
+        <img src="img/LMC.png" />
+        <h2>Projets</h2>
+      </section>
+      <section id="page-id-2" class="experience" style="display: none">
+        <h2 class="title">Parcours (écoles & jobs)</h2>
+      </section>
+      <section id="page-id-3" class="discover" style="display: none">
+        <h2 class="title">Qui suis-je ?</h2>
+      </section>
+      <section id="contact-page" class="discover" style="display: none">
+        <h2 class="title">Contactez-moi je vous en supplie</h2>
+      </section>
     </div>
 
     <div class="nav nav-right anim-fade">
-        <span>Mes projets</span>
-        <a><button class="button nav-btn" data-feather="chevron-right"></button></a>
+      <span>Mes projets</span>
+      <a
+        ><button class="button nav-btn" data-feather="chevron-right"></button
+      ></a>
     </div>
     <div class="nav nav-left anim-fade">
-        <span>Me découvrir</span>
-        <a><button class="button nav-btn" data-feather="chevron-left"></button></a>
+      <span>Me découvrir</span>
+      <a
+        ><button class="button nav-btn" data-feather="chevron-left"></button
+      ></a>
     </div>
     <div class="nav nav-down anim-fade">
-        <span>Me contacter</span>
-        <a><button class="button primary nav-btn" data-feather="chevron-down"></button></a>
+      <span>Me contacter</span>
+      <a
+        ><button
+          class="button primary nav-btn"
+          data-feather="chevron-down"
+        ></button
+      ></a>
+    </div>
+
+    <div id="nav-dots">
+      <div id="dot-id-0" class="nav-dot selected"></div>
+      <div id="dot-id-1" class="nav-dot"></div>
+      <div id="dot-id-2" class="nav-dot"></div>
+      <div id="dot-id-3" class="nav-dot"></div>
     </div>
 
     <!-- Cursor -->
     <div id="cursor">
-        <div id="cursor-dot"></div>
-        <div id="cursor-light"></div>
+      <div id="cursor-dot"></div>
+      <div id="cursor-light"></div>
     </div>
 
     <script>
-        feather.replace();
+      feather.replace();
     </script>
-</body>
-
+  </body>
 </html>
