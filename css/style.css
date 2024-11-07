@@ -49,6 +49,8 @@
 html {
   height: 100%;
   overflow: hidden;
+  justify-content: center;
+  display: flex;
 }
 
 body {
@@ -62,6 +64,7 @@ body {
   align-items: center;
   padding-left: 15%;
   padding-right: 15%;
+  max-width: 1400px;
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   justify-content: center;
 }
