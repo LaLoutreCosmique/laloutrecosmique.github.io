@@ -199,7 +199,7 @@ h1 {
 }
 #nav-dots .nav-dot {
   background: #f0ffff;
-  border-radius: 50%;
+  border-radius: 4px;
   height: 7px;
   width: 7px;
   opacity: 20%;
