@@ -60,6 +60,16 @@ $gradient: linear-gradient(
   }
 }
 
+// RESPOSIVE
+
+@mixin onMobile() {
+  @media only screen and (max-device-width: 640px) {
+    & {
+      @content;
+    }
+  }
+}
+
 // ------------------------------------------------------
 
 * {
@@ -152,6 +162,10 @@ h1 {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+
+  @include onMobile() {
+    display: none;
+  }
 }
 
 #cursor-dot {
@@ -176,13 +190,14 @@ h1 {
 
 // ------------------------------------------------------
 
-// NAV BUTTONS //
+// NAVIGATION //
 
 .nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
+  width: 6.5rem;
 
   span {
     color: rgba($color: $white, $alpha: 0.5);

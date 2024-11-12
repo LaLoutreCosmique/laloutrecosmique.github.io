@@ -131,6 +131,12 @@ h1 {
   top: 50%;
   left: 50%;
 }
+@media only screen and (max-device-width: 640px) {
+  #cursor-dot,
+  #cursor-light {
+    display: none;
+  }
+}
 
 #cursor-dot {
   border-radius: 50%;
@@ -152,6 +158,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   position: absolute;
+  width: 6.5rem;
 }
 .nav span {
   color: rgba(240, 255, 255, 0.5);
