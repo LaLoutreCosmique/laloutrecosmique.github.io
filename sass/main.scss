@@ -63,7 +63,15 @@ $gradient: linear-gradient(
 // RESPOSIVE
 
 @mixin onMobile() {
-  @media only screen and (max-device-width: 640px) {
+  @media (pointer: coarse) {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin notOnMobile() {
+  @media (pointer: fine) {
     & {
       @content;
     }
@@ -78,9 +86,9 @@ $gradient: linear-gradient(
 
 html {
   height: 100%;
-  overflow: hidden;
   justify-content: center;
   display: flex;
+  overflow: hidden;
 }
 
 body {
@@ -100,17 +108,20 @@ body {
   justify-content: center;
 }
 
-p,
-.button {
-  font-size: 1.13rem;
-}
-
 h1 {
   font-family: "Poetsen One";
   font-size: 6rem;
   text-transform: uppercase;
   margin-block-start: 0;
   margin-block-end: 0.2em;
+}
+
+section {
+  overflow-x: scroll;
+
+  a {
+    color: $primary-color;
+  }
 }
 
 .gradient-text {
@@ -130,6 +141,10 @@ h1 {
   stroke-width: 3;
 }
 
+svg path {
+  fill: $white;
+}
+
 // BUTTONS //
 
 .button {
@@ -139,6 +154,7 @@ h1 {
   border-radius: 2rem;
   transition: box-shadow 0.3s ease-in;
   background: none;
+  width: fit-content;
 }
 
 .primary {
@@ -305,4 +321,21 @@ h1 {
   img {
     width: 100%;
   }
+}
+
+#contact-page {
+  flex-direction: column;
+
+  #social-media {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.projects {
+  flex-direction: column;
 }

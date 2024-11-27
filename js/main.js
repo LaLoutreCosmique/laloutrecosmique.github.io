@@ -120,7 +120,7 @@ var menuNavigation = {
     "Me contacter", // keep contact at the end of array
   ],
   pagesSubHero: [
-    "Vous ne seriez pas à la recherche d'un alternant par hasard ?",
+    "Vous ne chercheriez pas un alternant par hasard ?",
     "Jouez à Let Me Cook !",
     "Le début d'une aventure...",
     'On m\'appelle aussi "Loutre"',
@@ -367,8 +367,7 @@ var menuNavigation = {
       this.$subHero.innerHTML = this.pagesSubHero[this.pagesSubHero.length - 1];
       this.$navDownTitle.innerHTML = this.pagesTitle[newPageID];
 
-      this.$pages[this.currentPageID].style.display = "none";
-      this.$contactPage.style.display = "block";
+      this.displayPage(this.$pages[this.currentPageID], this.$contactPage);
 
       this.rotateDownBtn();
     }
@@ -381,8 +380,7 @@ var menuNavigation = {
       this.$navDownTitle.innerHTML =
         this.pagesTitle[this.pagesTitle.length - 1];
 
-      this.$contactPage.style.display = "none";
-      this.$pages[newPageID].style.display = "block";
+      this.displayPage(this.$contactPage, this.$pages[newPageID]);
 
       this.rotateDownBtn();
     }
@@ -391,8 +389,7 @@ var menuNavigation = {
     else {
       this.$subHero.innerHTML = this.pagesSubHero[newPageID];
 
-      this.$pages[this.currentPageID].style.display = "none";
-      this.$pages[newPageID].style.display = "block";
+      this.displayPage(this.$pages[this.currentPageID], this.$pages[newPageID]);
     }
 
     // Switch selected nav-dots
@@ -410,6 +407,11 @@ var menuNavigation = {
       ];
 
     this.currentPageID = newPageID;
+  },
+
+  displayPage: function ($pageToHide, $pageToShow) {
+    $pageToHide.style.display = "none";
+    $pageToShow.style.display = "flex";
   },
 
   rotateDownBtn: function () {
